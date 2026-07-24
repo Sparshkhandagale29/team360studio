@@ -455,12 +455,9 @@ body:has(.mobile-menu.open) .sticky-contact-widget {
   height: 100%;
   object-fit: cover;
   filter: saturate(0.5) brightness(0.8);
-  transform: scale(1.0);
-  transition: transform 0.6s ease-out;
-}
-
-.about-left:hover img {
-  transform: scale(1.02);
+  animation: dynamic-breath 8s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform;
 }
 
 .about-left-frame {
