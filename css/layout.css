@@ -1968,7 +1968,6 @@ body:has(.mobile-menu.open) .sticky-contact-widget {
   cursor: pointer !important;
   pointer-events: auto !important;
   overflow: hidden;
-  image-rendering: -webkit-optimize-contrast;
   transform: translateZ(0);
   transition: transform 0.4s var(--ease-cinematic), border-color 0.4s ease;
 }
@@ -2450,8 +2449,6 @@ button, a, .category-card, .image-square-wrapper, .commercial-item, .nav-link, .
 .category-card-image,
 .commercial-item img,
 .modal-grid-item {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
   transform: translate3d(0,0,0);
   will-change: transform;
 }
