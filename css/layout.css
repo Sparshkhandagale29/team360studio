@@ -12,7 +12,7 @@
   left: 0;
   right: 0;
   z-index: 999999 !important;
-  padding: 18px var(--container-pad);
+  padding: 8px var(--container-pad);
   display: flex;
   align-items: center;
   justify-content: space-between;
