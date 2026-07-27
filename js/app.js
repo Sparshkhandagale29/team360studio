@@ -312,6 +312,10 @@ document.addEventListener('DOMContentLoaded', () => {
       'assets/bedroom/DSC02549 copy.jpg'
     ],
     'living-room': [
+      'assets/living-room/480862264_1164825535649453_7559549229460825838_n.jpg',
+      'assets/living-room/488544768_1201320528666620_8161547787248359579_n (1).jpg',
+      'assets/living-room/488608802_1201320531999953_1648333591619794739_n.jpg',
+      'assets/living-room/488871775_1201320455333294_1345724270905868941_n (1).jpg',
       'assets/living-room/A9P03089.jpg',
       'assets/living-room/A9P03464.jpg',
       'assets/living-room/A9P04328.jpg',
@@ -325,6 +329,9 @@ document.addEventListener('DOMContentLoaded', () => {
       'assets/living-room/DSC01985 copy.jpg'
     ],
     'BESPOKE PLACES': [
+      'assets/bespoke-spaces/481663960_1175101191288554_1435476508949320963_n.jpg',
+      'assets/bespoke-spaces/488040560_1201320355333304_7378132856439543647_n.jpg',
+      'assets/bespoke-spaces/488647028_1201964731935533_3269025117096844731_n.jpg',
       'assets/bespoke-spaces/A9P03091.jpg',
       'assets/bespoke-spaces/A9P03354.jpg',
       'assets/bespoke-spaces/A9P03360.jpg',
