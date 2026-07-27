@@ -751,11 +751,12 @@ body:has(.mobile-menu.open) .sticky-contact-widget {
   overflow: hidden !important;
   margin: 0 !important;
   padding: 0 !important;
-  will-change: transform; /* Prepares browser engine for fast rendering */
-  transform: translateZ(0); /* Forces hardware acceleration */
 }
 
 .portfolio-img-uncropped {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   content-visibility: auto; /* Skips rendering off-screen images until scrolled into view */
   loading: lazy; /* Native lazy loading to prevent initial memory overload */
 }
@@ -765,6 +766,8 @@ body:has(.mobile-menu.open) .sticky-contact-widget {
   height: 100% !important;
   object-fit: cover !important;
   display: block !important;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
 }
 
 /* Portfolio Viewport System */
@@ -861,10 +864,12 @@ body:has(.mobile-menu.open) .sticky-contact-widget {
 .portfolio-item[style*="display: none"] { display: none !important; }
 
 .portfolio-item img {
-  will-change: transform;
-  transform: translateZ(0);
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   aspect-ratio: 4 / 3;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
 }
 
 .portfolio-info-name {
@@ -2193,6 +2198,8 @@ body:has(.mobile-menu.open) .sticky-contact-widget {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
   display: block;
   transition: opacity 0.3s ease, transform 0.4s var(--ease-cinematic);
   
@@ -2353,7 +2360,8 @@ button, a, .category-card, .image-square-wrapper, .commercial-item, .nav-link, .
 
 #portfolio img {
   content-visibility: auto;
-  transform: translateZ(0); /* Force immediate hardware layer initialization */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
 }
 
 /* Enforce Absolute Symmetrical Flanking Rules */
@@ -2519,9 +2527,7 @@ button, a, .category-card, .image-square-wrapper, .commercial-item, .nav-link, .
 
 .portfolio-card-img,
 .portfolio-img-uncropped {
-  will-change: transform !important;
   backface-visibility: hidden !important;
-  transform: translateZ(0) !important;
 }
 
 /* File End */

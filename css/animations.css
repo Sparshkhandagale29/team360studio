@@ -129,7 +129,6 @@
   height: 100%;
   object-fit: cover;
   transition: transform 1.1s var(--ease-cinematic);
-  will-change: transform;
 }
 
 .portfolio-item:hover img {
