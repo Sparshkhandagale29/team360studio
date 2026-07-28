@@ -2571,7 +2571,7 @@ button, a, .category-card, .image-square-wrapper, .commercial-item, .nav-link, .
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 0.5rem;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 var(--container-pad);
@@ -2602,6 +2602,10 @@ button, a, .category-card, .image-square-wrapper, .commercial-item, .nav-link, .
 
 .brain-text.text-right {
   text-align: left; /* text for right brain aligns left, towards image */
+}
+
+.mindset-list {
+  gap: 2.5rem !important;
 }
 
 .brain-image-container {
