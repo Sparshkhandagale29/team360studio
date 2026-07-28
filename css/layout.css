@@ -2646,15 +2646,30 @@ button, a, .category-card, .image-square-wrapper, .commercial-item, .nav-link, .
   margin-bottom: 1.5rem;
 }
 
+.mindset-list-desktop-left {
+  display: inline-block;
+  text-align: left;
+}
+
 @media (max-width: 992px) {
   .brains-container {
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
   }
   
   .brain-text.text-left, .brain-text.text-right {
     text-align: center;
     order: 2; /* Text below image on mobile */
+  }
+  
+  .mindset-list-desktop-left {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mindset-list li {
+    text-align: center;
   }
 
   .brain-image-container {
