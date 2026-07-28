@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* =============================================
      05. INTERSECTION OBSERVER — FADE-UP
   ============================================= */
-  const fadeEls = document.querySelectorAll('.fade-up, .fade-left');
+  const fadeEls = document.querySelectorAll('.fade-up, .fade-left, .slide-out-left, .slide-out-right');
 
   const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

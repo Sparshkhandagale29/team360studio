@@ -457,3 +457,32 @@
   0%, 100% { opacity: 0.6; }
   50% { opacity: 1; }
 }
+
+/* ===========================
+   SLIDE OUT (Mindset Matrix Text)
+=========================== */
+.slide-out-left {
+  opacity: 0;
+  transform: translateX(100px);
+  transition:
+    opacity 1.2s var(--ease-cinematic),
+    transform 1.2s var(--ease-cinematic);
+}
+
+.slide-out-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-out-right {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition:
+    opacity 1.2s var(--ease-cinematic),
+    transform 1.2s var(--ease-cinematic);
+}
+
+.slide-out-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
