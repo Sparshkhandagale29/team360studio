@@ -2571,10 +2571,20 @@ button, a, .category-card, .image-square-wrapper, .commercial-item, .nav-link, .
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 2rem;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 var(--container-pad);
+}
+
+.single-brain-layout {
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.center-image-container {
+  flex: 0 0 auto;
+  width: clamp(250px, 35vw, 450px);
 }
 
 .brain-wrapper {
@@ -2608,6 +2618,11 @@ button, a, .category-card, .image-square-wrapper, .commercial-item, .nav-link, .
   gap: 2.5rem !important;
 }
 
+.mindset-list li {
+  margin-bottom: 2rem;
+  line-height: 2;
+}
+
 .brain-image-container {
   flex-shrink: 0;
   width: clamp(200px, 30vw, 400px);
@@ -2626,7 +2641,7 @@ button, a, .category-card, .image-square-wrapper, .commercial-item, .nav-link, .
 }
 
 .centered-list li {
-  text-align: center;
+  text-align: justify;
   margin-bottom: 1.5rem;
 }
 
@@ -2636,12 +2651,6 @@ button, a, .category-card, .image-square-wrapper, .commercial-item, .nav-link, .
     gap: 4rem;
   }
   
-  .brain-wrapper, .brain-wrapper.right-brain-wrapper {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-  }
-
   .brain-text.text-left, .brain-text.text-right {
     text-align: center;
     order: 2; /* Text below image on mobile */
