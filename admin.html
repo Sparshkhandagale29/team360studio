@@ -114,33 +114,43 @@
     </div>
   </div>
 
-    <script>
-    // Inlined to prevent caching issues and executed immediately since it's at the end of body
-    window.attemptLogin = function() {
+  <script>
+    (function() {
+      const loginBtn = document.getElementById('login-btn-trigger');
       const loginError = document.getElementById('login-error');
       const usernameInput = document.getElementById('username');
       const passwordInput = document.getElementById('password');
       const loginScreen = document.getElementById('login-screen');
       const dashboardScreen = document.getElementById('dashboard-screen');
-
-      const user = usernameInput.value.trim().toLowerCase();
-      const pass = passwordInput.value.trim().toLowerCase();
-
-      if (user === 'adminteam360.123' && pass === 'gauravsir') {
-        loginError.textContent = '';
-        loginScreen.classList.remove('active');
-        dashboardScreen.classList.add('active');
-        usernameInput.value = '';
-        passwordInput.value = '';
-        renderDummyGallery(); 
-      } else {
-        alert('Incorrect username or password. Please check your spelling!');
-        loginError.textContent = 'Invalid username or password.';
-      }
-    };
-
-    (function() {
       const logoutBtn = document.getElementById('logout-btn');
+      const navBtns = document.querySelectorAll('.nav-btn');
+      const panels = document.querySelectorAll('.dashboard-panel');
+      const uploadTrigger = document.getElementById('upload-area-trigger');
+      const fileInput = document.getElementById('file-input');
+      const uploadPreview = document.getElementById('upload-preview');
+      const confirmUploadBtn = document.getElementById('confirm-upload-btn');
+      const removeCategorySelect = document.getElementById('remove-category');
+      const dummyGallery = document.getElementById('dummy-gallery');
+
+      loginBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const user = usernameInput.value.trim().toLowerCase();
+        const pass = passwordInput.value.trim().toLowerCase();
+
+        if (user === 'adminteam360.123' && pass === 'gauravsir') {
+          loginError.textContent = '';
+          loginScreen.classList.remove('active');
+          dashboardScreen.classList.add('active');
+          usernameInput.value = '';
+          passwordInput.value = '';
+          renderDummyGallery(); 
+        } else {
+          alert('Incorrect username or password. Please check your spelling!');
+          loginError.textContent = 'Invalid username or password.';
+        }
+      });
+
+      logoutBtn.addEventListener('click', () => {
         dashboardScreen.classList.remove('active');
         loginScreen.classList.add('active');
       });
@@ -176,7 +186,7 @@
       });
 
       confirmUploadBtn.addEventListener('click', () => {
-        alert('Prototype: Photos uploaded successfully! (Note: Since this is a prototype without a backend database, they won\\'t permanently save yet.)');
+        alert('Prototype: Photos uploaded successfully!');
         fileInput.value = '';
         uploadPreview.innerHTML = '';
         confirmUploadBtn.style.display = 'none';
