@@ -34,7 +34,7 @@
           <input type="password" id="password" placeholder="Enter password" required>
         </div>
         <p id="login-error" class="error-msg"></p>
-        <button type="button" id="login-btn-trigger" class="admin-btn login-btn" onclick="attemptLogin()">ACCESS PORTAL</button>
+        <button type="submit" class="admin-btn login-btn">ACCESS PORTAL</button>
       </form>
     </div>
   </div>
@@ -72,11 +72,8 @@
             <label for="upload-category">Select Category:</label>
             <select id="upload-category">
               <option value="residential">Residential</option>
-              <option value="living-room">Residential - Living Room</option>
-              <option value="bedroom">Residential - Bedroom</option>
               <option value="kitchen">Residential - Kitchen</option>
-              <option value="dining-area">Residential - Dining Area</option>
-              <option value="bespoke-spaces">Residential - Bespoke Places</option>
+              <option value="living-room">Residential - Living Room</option>
               <option value="hospitality">Hospitality</option>
               <option value="commercial">Commercial</option>
             </select>
@@ -101,11 +98,8 @@
             <label for="remove-category">Select Category:</label>
             <select id="remove-category">
               <option value="residential">Residential</option>
-              <option value="living-room">Residential - Living Room</option>
-              <option value="bedroom">Residential - Bedroom</option>
               <option value="kitchen">Residential - Kitchen</option>
-              <option value="dining-area">Residential - Dining Area</option>
-              <option value="bespoke-spaces">Residential - Bespoke Places</option>
+              <option value="living-room">Residential - Living Room</option>
               <option value="hospitality">Hospitality</option>
               <option value="commercial">Commercial</option>
             </select>
@@ -120,254 +114,6 @@
     </div>
   </div>
 
-  <script>
-    (function() {
-      const loginBtn = document.getElementById('login-btn-trigger');
-      const loginError = document.getElementById('login-error');
-      const usernameInput = document.getElementById('username');
-      const passwordInput = document.getElementById('password');
-      const loginScreen = document.getElementById('login-screen');
-      const dashboardScreen = document.getElementById('dashboard-screen');
-      const logoutBtn = document.getElementById('logout-btn');
-      const navBtns = document.querySelectorAll('.nav-btn');
-      const panels = document.querySelectorAll('.dashboard-panel');
-      const uploadTrigger = document.getElementById('upload-area-trigger');
-      const fileInput = document.getElementById('file-input');
-      const uploadPreview = document.getElementById('upload-preview');
-      const confirmUploadBtn = document.getElementById('confirm-upload-btn');
-      const removeCategorySelect = document.getElementById('remove-category');
-      const dummyGallery = document.getElementById('dummy-gallery');
-
-      loginBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const user = usernameInput.value.trim().toLowerCase();
-        const pass = passwordInput.value.trim().toLowerCase();
-
-        if (user === 'adminteam360.123' && pass === 'gauravsir') {
-          loginError.textContent = '';
-          loginScreen.classList.remove('active');
-          dashboardScreen.classList.add('active');
-          usernameInput.value = '';
-          passwordInput.value = '';
-          renderDummyGallery(); 
-        } else {
-          alert('Incorrect username or password. Please check your spelling!');
-          loginError.textContent = 'Invalid username or password.';
-        }
-      });
-
-      logoutBtn.addEventListener('click', () => {
-        dashboardScreen.classList.remove('active');
-        loginScreen.classList.add('active');
-      });
-
-      navBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          navBtns.forEach(b => b.classList.remove('active'));
-          panels.forEach(p => p.classList.remove('active'));
-          btn.classList.add('active');
-          const targetId = btn.getAttribute('data-target');
-          document.getElementById(targetId).classList.add('active');
-        });
-      });
-
-      uploadTrigger.addEventListener('click', () => {
-        fileInput.click();
-      });
-
-      fileInput.addEventListener('change', () => {
-        uploadPreview.innerHTML = ''; 
-        if (fileInput.files.length > 0) {
-          Array.from(fileInput.files).forEach(file => {
-            const url = URL.createObjectURL(file);
-            const imgItem = document.createElement('div');
-            imgItem.className = 'gallery-item';
-            imgItem.innerHTML = `<img src="${url}" alt="Preview">`;
-            uploadPreview.appendChild(imgItem);
-          });
-          confirmUploadBtn.style.display = 'block';
-        } else {
-          confirmUploadBtn.style.display = 'none';
-        }
-      });
-
-      confirmUploadBtn.addEventListener('click', () => {
-        alert('Prototype: Photos uploaded successfully!');
-        fileInput.value = '';
-        uploadPreview.innerHTML = '';
-        confirmUploadBtn.style.display = 'none';
-      });
-
-      const dummyImagesMap = {
-  "commercial": [
-    "assets/Commercial/DSC02627 copy.jpg",
-    "assets/Commercial/DSC02654 copy.jpg",
-    "assets/Commercial/DSC02749 copy.jpg",
-    "assets/Commercial/DSC02824 copy.jpg",
-    "assets/Commercial/DSC02845 copy.jpg",
-    "assets/Commercial/DSC02881 copy.jpg",
-    "assets/Commercial/DSC02902 copy.jpg",
-    "assets/Commercial/DSC02951 copy.jpg",
-    "assets/Commercial/DSC02967 copy.jpg",
-    "assets/Commercial/DSC02982 copy.jpg",
-    "assets/Commercial/DSC02998 copy.jpg",
-    "assets/Commercial/DSC03084 copy.jpg",
-    "assets/Commercial/DSC07668.JPG",
-    "assets/Commercial/DSC07677.JPG",
-    "assets/Commercial/DSC07763.JPG",
-    "assets/Commercial/DSC07794.JPG",
-    "assets/Commercial/SRP_8724.jpg",
-    "assets/Commercial/SRP_8758.jpg",
-    "assets/Commercial/SRP_8761.jpg",
-    "assets/Commercial/SRP_8769.jpg",
-    "assets/Commercial/SRP_8777.jpg",
-    "assets/Commercial/SRP_8811.jpg",
-    "assets/Commercial/SRP_8824.jpg",
-    "assets/Commercial/SRP_8834.jpg",
-    "assets/Commercial/SRP_8837.jpg",
-    "assets/Commercial/SRP_8842.jpg",
-    "assets/Commercial/SRP_8852.jpg",
-    "assets/Commercial/SRP_8857.jpg",
-    "assets/Commercial/SRP_8871.jpg",
-    "assets/Commercial/SRP_8888.jpg"
-  ],
-  "hospitality": [
-    "assets/Hospitality/WhatsApp Image 2026-03-06 at 6.55.07 PM.jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-03-06 at 6.57.06 PM (5).jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-03-06 at 8.04.13 PM (10).jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-03-06 at 8.04.13 PM (8).jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-03-07 at 11.52.52 AM (1).jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-03-09 at 2.03.46 PM.jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-03-09 at 2.03.52 PM.jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-03-09 at 2.03.53 PM.jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-07-15 at 5.19.39 PM.jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-07-15 at 5.20.20 PM (2).jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-07-15 at 5.20.49 PM (1).jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-07-15 at 5.21.37 PM (2).jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-07-15 at 5.22.20 PM.jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-07-15 at 5.29.26 PM (1).jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-07-15 at 5.31.59 PM.jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-07-15 at 5.32.29 PM.jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-07-15 at 5.37.35 PM.jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-07-15 at 5.38.41 PM.jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-07-15 at 5.39.52 PM (1).jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-07-15 at 5.39.52 PM.jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-07-15 at 5.40.19 PM.jpeg",
-    "assets/Hospitality/WhatsApp Image 2026-07-15 at 5.40.21 PM.jpeg"
-  ],
-  "living-room": [
-    "assets/living-room/480862264_1164825535649453_7559549229460825838_n.jpg",
-    "assets/living-room/488544768_1201320528666620_8161547787248359579_n (1).jpg",
-    "assets/living-room/488608802_1201320531999953_1648333591619794739_n.jpg",
-    "assets/living-room/488871775_1201320455333294_1345724270905868941_n (1).jpg",
-    "assets/living-room/A9P03089.jpg",
-    "assets/living-room/A9P03464.jpg",
-    "assets/living-room/A9P04328.jpg",
-    "assets/living-room/A9P04445.jpg",
-    "assets/living-room/A9P04446.jpg",
-    "assets/living-room/A9P04447.jpg",
-    "assets/living-room/Cinematrix Production CC-56.jpg",
-    "assets/living-room/Cinematrix Production CC-68.jpg",
-    "assets/living-room/Cinematrix Production CC-81.jpg",
-    "assets/living-room/DSC00153 copy.jpg",
-    "assets/living-room/DSC00193 copy.jpg",
-    "assets/living-room/DSC00898 copy.jpg",
-    "assets/living-room/DSC01972 copy.jpg",
-    "assets/living-room/DSC01985 copy.jpg"
-  ],
-  "bedroom": [
-    "assets/bedroom/A9P03245.jpg",
-    "assets/bedroom/A9P04360.jpg",
-    "assets/bedroom/Cinematrix Production CC-102 - Copy.jpg",
-    "assets/bedroom/Cinematrix Production CC-89.jpg",
-    "assets/bedroom/DSC00079 copy.jpg",
-    "assets/bedroom/DSC00543 copy.jpg",
-    "assets/bedroom/DSC01767 copy.jpg.jpeg",
-    "assets/bedroom/DSC01880 copy.jpg.jpeg",
-    "assets/bedroom/DSC02058 copy.jpg.jpeg",
-    "assets/bedroom/DSC02549 copy.jpg"
-  ],
-  "kitchen": [
-    "assets/kitchen/A9P03168.jpg",
-    "assets/kitchen/A9P03174.jpg",
-    "assets/kitchen/A9P04421.jpg",
-    "assets/kitchen/Cinematrix Production CC-173.jpg",
-    "assets/kitchen/DSC00317 copy.jpg",
-    "assets/kitchen/DSC00329 copy.jpg",
-    "assets/kitchen/DSC00784 copy.jpg",
-    "assets/kitchen/DSC02433 copy.jpg"
-  ],
-  "bespoke-spaces": [
-    "assets/bespoke-spaces/481663960_1175101191288554_1435476508949320963_n.jpg",
-    "assets/bespoke-spaces/488040560_1201320355333304_7378132856439543647_n.jpg",
-    "assets/bespoke-spaces/488647028_1201964731935533_3269025117096844731_n.jpg",
-    "assets/bespoke-spaces/A9P03091.jpg",
-    "assets/bespoke-spaces/A9P03354.jpg",
-    "assets/bespoke-spaces/A9P03360.jpg",
-    "assets/bespoke-spaces/A9P03418.jpg",
-    "assets/bespoke-spaces/A9P04311.jpg",
-    "assets/bespoke-spaces/A9P04408.jpg",
-    "assets/bespoke-spaces/A9P04451.jpg",
-    "assets/bespoke-spaces/Cinematrix Production CC-117.jpg",
-    "assets/bespoke-spaces/Cinematrix Production CC-68.jpg",
-    "assets/bespoke-spaces/Cinematrix Production CC-71.jpg",
-    "assets/bespoke-spaces/Cinematrix Production CC-81.jpg",
-    "assets/bespoke-spaces/DSC00133 copy.jpg",
-    "assets/bespoke-spaces/DSC00367 copy.jpg",
-    "assets/bespoke-spaces/DSC00517 copy.jpg",
-    "assets/bespoke-spaces/DSC00922 copy.jpg",
-    "assets/bespoke-spaces/DSC02156 copy.jpg",
-    "assets/bespoke-spaces/DSC02214 copy.jpg",
-    "assets/bespoke-spaces/DSC02262 copy.jpg",
-    "assets/bespoke-spaces/DSC02345 copy.jpg"
-  ],
-  "dining-area": [
-    "assets/dining-area/A9P03058.jpg",
-    "assets/dining-area/A9P03068.jpg",
-    "assets/dining-area/A9P04383.jpg",
-    "assets/dining-area/A9P04398.jpg",
-    "assets/dining-area/DSC00334 copy.jpg",
-    "assets/dining-area/DSC02020 copy.jpg",
-    "assets/dining-area/DSC02165 copy.jpg"
-  ],
-  "residential": [
-    "assets/A9P03099.jpg",
-    "assets/A9P03285.jpg",
-    "assets/brain final.png",
-    "assets/Cinematrix Production CC-102 - Copy.jpg",
-    "assets/Cinematrix Production CC-72.jpg",
-    "assets/logo mian.png"
-  ]
-};
-
-      function renderDummyGallery() {
-        dummyGallery.innerHTML = '';
-        const cat = removeCategorySelect.value;
-        const images = dummyImagesMap[cat] || dummyImagesMap['residential'];
-        
-        images.forEach((src, index) => {
-          const item = document.createElement('div');
-          item.className = 'gallery-item';
-          item.id = `dummy-img-${cat}-${index}`;
-          item.innerHTML = `
-            <img src="${src}" alt="Portfolio image" onerror="this.src='https://via.placeholder.com/200?text=Placeholder'">
-            <button class="delete-btn" aria-label="Delete Photo" onclick="deletePhoto('${item.id}')">✕</button>
-          `;
-          dummyGallery.appendChild(item);
-        });
-      }
-
-      removeCategorySelect.addEventListener('change', renderDummyGallery);
-
-      window.deletePhoto = function(id) {
-        if (confirm('Are you sure you want to delete this selected pic?')) {
-          const el = document.getElementById(id);
-          if (el) {
-            el.remove();
-          }
-        }
-      };
-    })();
-  </script>
+  <script src="js/admin.js"></script>
 </body>
 </html>
