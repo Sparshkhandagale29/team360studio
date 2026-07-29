@@ -72,8 +72,11 @@
             <label for="upload-category">Select Category:</label>
             <select id="upload-category">
               <option value="residential">Residential</option>
-              <option value="kitchen">Residential - Kitchen</option>
               <option value="living-room">Residential - Living Room</option>
+              <option value="bedroom">Residential - Bedroom</option>
+              <option value="kitchen">Residential - Kitchen</option>
+              <option value="dining-area">Residential - Dining Area</option>
+              <option value="bespoke-spaces">Residential - Bespoke Places</option>
               <option value="hospitality">Hospitality</option>
               <option value="commercial">Commercial</option>
             </select>
@@ -98,8 +101,11 @@
             <label for="remove-category">Select Category:</label>
             <select id="remove-category">
               <option value="residential">Residential</option>
-              <option value="kitchen">Residential - Kitchen</option>
               <option value="living-room">Residential - Living Room</option>
+              <option value="bedroom">Residential - Bedroom</option>
+              <option value="kitchen">Residential - Kitchen</option>
+              <option value="dining-area">Residential - Dining Area</option>
+              <option value="bespoke-spaces">Residential - Bespoke Places</option>
               <option value="hospitality">Hospitality</option>
               <option value="commercial">Commercial</option>
             </select>
@@ -192,19 +198,52 @@
         confirmUploadBtn.style.display = 'none';
       });
 
-      const dummyImages = [
-        'assets/Cinematrix Production CC-101.jpg',
-        'assets/Cinematrix Production CC-102 - Copy.jpg',
-        'assets/Cinematrix Production CC-27.jpg',
-        'assets/Cinematrix Production CC-9.jpg'
-      ];
+      const dummyImagesMap = {
+        'residential': [
+          'assets/Cinematrix Production CC-101.jpg',
+          'assets/Cinematrix Production CC-102 - Copy.jpg',
+        ],
+        'living-room': [
+          'assets/living-room/DSC00153 copy.jpg',
+          'assets/Cinematrix Production CC-27.jpg'
+        ],
+        'bedroom': [
+          'assets/bedroom/DSC00543 copy.jpg',
+          'assets/Cinematrix Production CC-9.jpg'
+        ],
+        'kitchen': [
+          'assets/kitchen/DSC00317 copy.jpg'
+        ],
+        'dining-area': [
+          'assets/A9P03285.jpg'
+        ],
+        'bespoke-spaces': [
+          'assets/bespoke-spaces/A9P03091.jpg',
+          'assets/Cinematrix Production CC-72.jpg'
+        ],
+        'hospitality': [
+          'assets/Hospitality/WhatsApp Image 2026-03-06 at 6.55.07 PM.jpeg',
+          'assets/Hospitality/WhatsApp Image 2026-03-06 at 6.57.06 PM (5).jpeg',
+          'assets/Hospitality/WhatsApp Image 2026-03-06 at 8.04.13 PM (10).jpeg',
+          'assets/Hospitality/WhatsApp Image 2026-03-06 at 8.04.13 PM (8).jpeg'
+        ],
+        'commercial': [
+          'assets/Commercial/DSC02654 copy.jpg',
+          'assets/Commercial/DSC02749 copy.jpg',
+          'assets/Commercial/DSC02824 copy.jpg',
+          'assets/Commercial/DSC02845 copy.jpg'
+        ]
+      };
 
       function renderDummyGallery() {
         dummyGallery.innerHTML = '';
-        dummyImages.forEach((src, index) => {
+        const cat = removeCategorySelect.value;
+        const images = dummyImagesMap[cat] || dummyImagesMap['residential'];
+        
+        images.forEach((src, index) => {
           const item = document.createElement('div');
           item.className = 'gallery-item';
-          item.id = `dummy-img-${index}`;
+          item.id = `dummy-img-${cat}-${index}`;
           item.innerHTML = `
             <img src="${src}" alt="Portfolio image" onerror="this.src='https://via.placeholder.com/200?text=Placeholder'">
             <button class="delete-btn" aria-label="Delete Photo" onclick="deletePhoto('${item.id}')">✕</button>
