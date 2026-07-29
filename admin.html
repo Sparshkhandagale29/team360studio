@@ -34,7 +34,7 @@
           <input type="password" id="password" placeholder="Enter password" required>
         </div>
         <p id="login-error" class="error-msg"></p>
-        <button type="button" id="login-btn-trigger" class="admin-btn login-btn">ACCESS PORTAL</button>
+        <button type="button" id="login-btn-trigger" class="admin-btn login-btn" onclick="attemptLogin()">ACCESS PORTAL</button>
       </form>
     </div>
   </div>
@@ -114,53 +114,33 @@
     </div>
   </div>
 
-  <script>
+    <script>
     // Inlined to prevent caching issues and executed immediately since it's at the end of body
-    (function() {
-      const loginBtn = document.getElementById('login-btn-trigger');
+    window.attemptLogin = function() {
       const loginError = document.getElementById('login-error');
       const usernameInput = document.getElementById('username');
       const passwordInput = document.getElementById('password');
-      
       const loginScreen = document.getElementById('login-screen');
       const dashboardScreen = document.getElementById('dashboard-screen');
+
+      const user = usernameInput.value.trim().toLowerCase();
+      const pass = passwordInput.value.trim().toLowerCase();
+
+      if (user === 'adminteam360.123' && pass === 'gauravsir') {
+        loginError.textContent = '';
+        loginScreen.classList.remove('active');
+        dashboardScreen.classList.add('active');
+        usernameInput.value = '';
+        passwordInput.value = '';
+        renderDummyGallery(); 
+      } else {
+        alert('Incorrect username or password. Please check your spelling!');
+        loginError.textContent = 'Invalid username or password.';
+      }
+    };
+
+    (function() {
       const logoutBtn = document.getElementById('logout-btn');
-
-      const navBtns = document.querySelectorAll('.nav-btn');
-      const panels = document.querySelectorAll('.dashboard-panel');
-
-      const uploadTrigger = document.getElementById('upload-area-trigger');
-      const fileInput = document.getElementById('file-input');
-      const uploadPreview = document.getElementById('upload-preview');
-      const confirmUploadBtn = document.getElementById('confirm-upload-btn');
-      const removeCategorySelect = document.getElementById('remove-category');
-      const dummyGallery = document.getElementById('dummy-gallery');
-
-      const validUsername = 'Adminteam360.123';
-      const validPassword = 'Gauravsir';
-
-      loginBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const user = usernameInput.value.trim().toLowerCase();
-        const pass = passwordInput.value.trim().toLowerCase();
-
-        const expectedUser = validUsername.toLowerCase();
-        const expectedPass = validPassword.toLowerCase();
-
-        if (user === expectedUser && pass === expectedPass) {
-          loginError.textContent = '';
-          loginScreen.classList.remove('active');
-          dashboardScreen.classList.add('active');
-          usernameInput.value = '';
-          passwordInput.value = '';
-          renderDummyGallery(); 
-        } else {
-          alert('Incorrect username or password. Please check your spelling!');
-          loginError.textContent = 'Invalid username or password.';
-        }
-      });
-
-      logoutBtn.addEventListener('click', () => {
         dashboardScreen.classList.remove('active');
         loginScreen.classList.add('active');
       });
