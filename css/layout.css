@@ -2607,7 +2607,7 @@ button, a, .category-card, .image-square-wrapper, .commercial-item, .nav-link, .
 }
 
 .brain-text.text-left {
-  text-align: right; /* text for left brain aligns right, towards image */
+  text-align: left; /* text for left brain aligns left */
 }
 
 .brain-text.text-right {
