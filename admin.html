@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Team 360 Studio</title>
+  
+  <!-- Main site globals for fonts and basic colors -->
+  <link rel="stylesheet" href="css/globals.css">
+  
+  <!-- Admin specific styling -->
+  <link rel="stylesheet" href="css/admin.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===============================
+       LOGIN SCREEN
+  =============================== -->
+  <div id="login-screen" class="admin-view active">
+    <div class="login-box">
+      <a href="index.html" class="back-home">← Back to Site</a>
+      <h2>ADMIN LOGIN</h2>
+      <form id="login-form">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter username" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" required>
+        </div>
+        <p id="login-error" class="error-msg"></p>
+        <button type="submit" class="admin-btn login-btn">ACCESS PORTAL</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===============================
+       DASHBOARD SCREEN
+  =============================== -->
+  <div id="dashboard-screen" class="admin-view">
+    
+    <div class="dashboard-header">
+      <h2>TEAM 360 - PORTFOLIO ADMIN</h2>
+      <button id="logout-btn" class="admin-btn outline">Logout</button>
+    </div>
+
+    <div class="dashboard-layout">
+      <!-- SIDEBAR -->
+      <aside class="dashboard-sidebar">
+        <button class="nav-btn active" data-target="upload-section">
+          Upload New Photo
+        </button>
+        <button class="nav-btn" data-target="remove-section">
+          Remove Old Photos
+        </button>
+      </aside>
+
+      <!-- MAIN CONTENT AREA -->
+      <main class="dashboard-content">
+        
+        <!-- Upload Section -->
+        <section id="upload-section" class="dashboard-panel active">
+          <h3>Upload to Portfolio</h3>
+          <p class="panel-desc">Select a category and choose photos from your device to upload to the live website.</p>
+          
+          <div class="form-group">
+            <label for="upload-category">Select Category:</label>
+            <select id="upload-category">
+              <option value="residential">Residential</option>
+              <option value="kitchen">Residential - Kitchen</option>
+              <option value="living-room">Residential - Living Room</option>
+              <option value="hospitality">Hospitality</option>
+              <option value="commercial">Commercial</option>
+            </select>
+          </div>
+
+          <div class="upload-area" id="upload-area-trigger">
+            <div class="upload-icon">📁</div>
+            <p>Click here to select photos</p>
+            <input type="file" id="file-input" multiple accept="image/*" style="display: none;">
+          </div>
+          
+          <div id="upload-preview" class="preview-grid"></div>
+          <button id="confirm-upload-btn" class="admin-btn" style="display: none; margin-top: 2rem;">Upload Selected Photos</button>
+        </section>
+
+        <!-- Remove Section -->
+        <section id="remove-section" class="dashboard-panel">
+          <h3>Remove from Portfolio</h3>
+          <p class="panel-desc">Select a category to view current photos. Click the 'X' to delete them from the live website.</p>
+          
+          <div class="form-group">
+            <label for="remove-category">Select Category:</label>
+            <select id="remove-category">
+              <option value="residential">Residential</option>
+              <option value="kitchen">Residential - Kitchen</option>
+              <option value="living-room">Residential - Living Room</option>
+              <option value="hospitality">Hospitality</option>
+              <option value="commercial">Commercial</option>
+            </select>
+          </div>
+
+          <div class="gallery-grid" id="dummy-gallery">
+            <!-- Dummy images will be injected by JS here -->
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
