@@ -2607,11 +2607,11 @@ button, a, .category-card, .image-square-wrapper, .commercial-item, .nav-link, .
 }
 
 .brain-text.text-left {
-  text-align: left; /* text for left brain aligns left */
+  text-align: center; /* center align for left brain text */
 }
 
 .brain-text.text-right {
-  text-align: left; /* text for right brain aligns left, towards image */
+  text-align: center; /* center align for right brain text */
 }
 
 .mindset-list {
@@ -2648,7 +2648,7 @@ button, a, .category-card, .image-square-wrapper, .commercial-item, .nav-link, .
 
 .mindset-list-desktop-left {
   display: inline-block;
-  text-align: left;
+  text-align: center;
 }
 
 @media (max-width: 992px) {
