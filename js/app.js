@@ -301,15 +301,21 @@ document.addEventListener('DOMContentLoaded', () => {
       'assets/kitchen/DSC02433 copy.jpg'
     ],
     'BEDROOM': [
+      'assets/bedroom/A9D_5145.jpg',
       'assets/bedroom/A9P03245.jpg',
+      'assets/bedroom/A9P04360.jpg',
       'assets/bedroom/Cinematrix Production CC-102 - Copy.jpg',
       'assets/bedroom/Cinematrix Production CC-89.jpg',
-      'assets/bedroom/DSC00543 copy.jpg',
-      'assets/bedroom/DSC01880 copy.jpg.jpeg',
       'assets/bedroom/DSC00079 copy.jpg',
+      'assets/bedroom/DSC00543 copy.jpg',
       'assets/bedroom/DSC01767 copy.jpg.jpeg',
+      'assets/bedroom/DSC01880 copy.jpg.jpeg',
       'assets/bedroom/DSC02058 copy.jpg.jpeg',
-      'assets/bedroom/DSC02549 copy.jpg'
+      'assets/bedroom/DSC02549 copy.jpg',
+      'assets/bedroom/DSC_4058-HDR.jpg',
+      'assets/bedroom/DSC_4070-HDR.jpg',
+      'assets/bedroom/SDS09380.jpg',
+      'assets/bedroom/SDS09448.jpg'
     ],
     'living-room': [
       'assets/living-room/480862264_1164825535649453_7559549229460825838_n.jpg',
@@ -322,35 +328,41 @@ document.addEventListener('DOMContentLoaded', () => {
       'assets/living-room/A9P04445.jpg',
       'assets/living-room/A9P04446.jpg',
       'assets/living-room/A9P04447.jpg',
+      'assets/living-room/Cinematrix Production CC-56.jpg',
+      'assets/living-room/Cinematrix Production CC-68.jpg',
+      'assets/living-room/Cinematrix Production CC-81.jpg',
       'assets/living-room/DSC00153 copy.jpg',
       'assets/living-room/DSC00193 copy.jpg',
       'assets/living-room/DSC00898 copy.jpg',
       'assets/living-room/DSC01972 copy.jpg',
-      'assets/living-room/DSC01985 copy.jpg'
+      'assets/living-room/DSC01985 copy.jpg',
+      'assets/living-room/DSC_3998-HDR.jpg'
     ],
     'BESPOKE PLACES': [
       'assets/bespoke-spaces/481663960_1175101191288554_1435476508949320963_n.jpg',
       'assets/bespoke-spaces/488040560_1201320355333304_7378132856439543647_n.jpg',
       'assets/bespoke-spaces/488647028_1201964731935533_3269025117096844731_n.jpg',
+      'assets/bespoke-spaces/A9D_5180.jpg',
       'assets/bespoke-spaces/A9P03091.jpg',
       'assets/bespoke-spaces/A9P03354.jpg',
       'assets/bespoke-spaces/A9P03360.jpg',
       'assets/bespoke-spaces/A9P03418.jpg',
       'assets/bespoke-spaces/A9P04311.jpg',
       'assets/bespoke-spaces/A9P04408.jpg',
-      'assets/living-room/Cinematrix Production CC-68.jpg',
-      'assets/living-room/Cinematrix Production CC-81.jpg',
+      'assets/bespoke-spaces/A9P04451.jpg',
       'assets/bespoke-spaces/Cinematrix Production CC-117.jpg',
+      'assets/bespoke-spaces/Cinematrix Production CC-68.jpg',
+      'assets/bespoke-spaces/Cinematrix Production CC-71.jpg',
+      'assets/bespoke-spaces/Cinematrix Production CC-81.jpg',
       'assets/bespoke-spaces/DSC00133 copy.jpg',
       'assets/bespoke-spaces/DSC00367 copy.jpg',
-      'assets/bespoke-spaces/DSC00922 copy.jpg',
-      'assets/bespoke-spaces/DSC02262 copy.jpg',
-      'assets/bespoke-spaces/A9P04451.jpg',
-      'assets/bespoke-spaces/Cinematrix Production CC-71.jpg',
       'assets/bespoke-spaces/DSC00517 copy.jpg',
+      'assets/bespoke-spaces/DSC00922 copy.jpg',
       'assets/bespoke-spaces/DSC02156 copy.jpg',
       'assets/bespoke-spaces/DSC02214 copy.jpg',
-      'assets/bespoke-spaces/DSC02345 copy.jpg'
+      'assets/bespoke-spaces/DSC02262 copy.jpg',
+      'assets/bespoke-spaces/DSC02345 copy.jpg',
+      'assets/bespoke-spaces/SDS09399.jpg'
     ],
     'dining-area': [
       'assets/dining-area/A9P03058.jpg',
@@ -359,7 +371,8 @@ document.addEventListener('DOMContentLoaded', () => {
       'assets/dining-area/A9P04398.jpg',
       'assets/dining-area/DSC00334 copy.jpg',
       'assets/dining-area/DSC02020 copy.jpg',
-      'assets/dining-area/DSC02165 copy.jpg'
+      'assets/dining-area/DSC02165 copy.jpg',
+      'assets/dining-area/DSC_4029.jpg'
     ]
   };
 
