@@ -298,7 +298,9 @@ document.addEventListener('DOMContentLoaded', () => {
       'assets/kitchen/DSC00317 copy.jpg',
       'assets/kitchen/DSC00329 copy.jpg',
       'assets/kitchen/DSC00784 copy.jpg',
-      'assets/kitchen/DSC02433 copy.jpg'
+      'assets/kitchen/DSC02433 copy.jpg',
+      'assets/kitchen/LAX_2759.JPG',
+      'assets/kitchen/SDS09323.jpg'
     ],
     'BEDROOM': [
       'assets/bedroom/A9D_5145.jpg',
@@ -315,7 +317,11 @@ document.addEventListener('DOMContentLoaded', () => {
       'assets/bedroom/DSC_4058-HDR.jpg',
       'assets/bedroom/DSC_4070-HDR.jpg',
       'assets/bedroom/SDS09380.jpg',
-      'assets/bedroom/SDS09448.jpg'
+      'assets/bedroom/SDS09448.jpg',
+      'assets/bedroom/LAX_2701.JPG',
+      'assets/bedroom/LAX_2717.JPG',
+      'assets/bedroom/LAX_2724.JPG',
+      'assets/bedroom/LAX_2730.JPG'
     ],
     'living-room': [
       'assets/living-room/480862264_1164825535649453_7559549229460825838_n.jpg',
@@ -336,7 +342,8 @@ document.addEventListener('DOMContentLoaded', () => {
       'assets/living-room/DSC00898 copy.jpg',
       'assets/living-room/DSC01972 copy.jpg',
       'assets/living-room/DSC01985 copy.jpg',
-      'assets/living-room/DSC_3998-HDR.jpg'
+      'assets/living-room/DSC_3998-HDR.jpg',
+      'assets/living-room/LAX_2600.JPG'
     ],
     'BESPOKE PLACES': [
       'assets/bespoke-spaces/481663960_1175101191288554_1435476508949320963_n.jpg',
@@ -362,7 +369,12 @@ document.addEventListener('DOMContentLoaded', () => {
       'assets/bespoke-spaces/DSC02214 copy.jpg',
       'assets/bespoke-spaces/DSC02262 copy.jpg',
       'assets/bespoke-spaces/DSC02345 copy.jpg',
-      'assets/bespoke-spaces/SDS09399.jpg'
+      'assets/bespoke-spaces/SDS09399.jpg',
+      'assets/bespoke-spaces/LAX_2616.JPG',
+      'assets/bespoke-spaces/LAX_2778.JPG',
+      'assets/bespoke-spaces/LAX_2793.JPG',
+      'assets/bespoke-spaces/LAX_2821.JPG',
+      'assets/bespoke-spaces/LAX_2847.JPG'
     ],
     'dining-area': [
       'assets/dining-area/A9P03058.jpg',
