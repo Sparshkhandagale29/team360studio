@@ -411,11 +411,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if (images && images.length > 0) {
           images.forEach(src => {
             const img = document.createElement('img');
-            img.src = src;
+            const extIndex = src.lastIndexOf('.');
+            const thumbSrc = extIndex !== -1 ? src.substring(0, extIndex) + '_thumb' + src.substring(extIndex) : src;
+            
+            img.src = thumbSrc;
             img.alt = categoryName;
             img.className = 'modal-grid-item portfolio-img-uncropped';
             img.loading = 'lazy';
             img.setAttribute('data-fullsrc', src);
+            
+            img.onerror = function() {
+                if (this.src !== src) {
+                    this.src = src;
+                }
+            };
+            
             modalGrid.appendChild(img);
           });
         }
