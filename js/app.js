@@ -305,8 +305,11 @@ document.addEventListener('DOMContentLoaded', () => {
     'BEDROOM': [
       'assets/bedroom/A9D_5145.jpg',
       'assets/bedroom/A9P03245.jpg',
+      'assets/bedroom/A9P03321.jpg',
+      'assets/bedroom/A9P03451.jpg',
       'assets/bedroom/A9P04360.jpg',
       'assets/bedroom/Cinematrix Production CC-102 - Copy.jpg',
+      'assets/bedroom/Cinematrix Production CC-26.jpg',
       'assets/bedroom/Cinematrix Production CC-89.jpg',
       'assets/bedroom/DSC00079 copy.jpg',
       'assets/bedroom/DSC00543 copy.jpg',
