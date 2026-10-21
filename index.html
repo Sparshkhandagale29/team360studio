@@ -40,6 +40,72 @@
 
   <!-- Lenis Smooth Scroll CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <!-- JSON-LD Structured Data: Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Team 360 Studio | Interior Design & Turnkey Execution",
+    "url": "https://www.team360.business/",
+    "telephone": "+917987011432",
+    "email": "gaurav@team360.business",
+    "logo": "https://www.team360.business/assets/logo-main_thumb.png",
+    "image": "https://www.team360.business/assets/Cinematrix Production CC-102 - Copy.jpg",
+    "description": "Team 360 Studio is a premier luxury interior design and turnkey execution studio in Nagpur, offering bespoke residential, commercial, clinic, and architectural design services.",
+    "priceRange": "\u20b9\u20b9\u20b9",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gopal Nagar Second Bus Stop, Near Dr Dubewar Clinic, Gopal Nagar",
+      "addressLocality": "Nagpur",
+      "addressRegion": "Maharashtra",
+      "postalCode": "440022",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 21.1166,
+      "longitude": 79.0522
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "11:00",
+        "closes": "19:00"
+      }
+    ],
+    "areaServed": [
+      {"@type": "City", "name": "Nagpur"},
+      {"@type": "Place", "name": "Ramdaspeth"},
+      {"@type": "Place", "name": "Civil Lines"},
+      {"@type": "Place", "name": "Dharampeth"},
+      {"@type": "Place", "name": "Byramji Town"},
+      {"@type": "Place", "name": "Besa"},
+      {"@type": "Place", "name": "Pratap Nagar"},
+      {"@type": "Place", "name": "Wardha Road"}
+    ],
+    "sameAs": [
+      "https://www.instagram.com/team360designs/",
+      "https://www.facebook.com/100063660536025/",
+      "https://www.google.com/maps/place/Team+360-+Interior+design+studio/@21.1166277,79.0496138,773m"
+    ],
+    "hasMap": "https://www.google.com/maps/place/Team+360-+Interior+design+studio/@21.1166277,79.0496138,773m",
+    "founder": [
+      {"@type": "Person", "name": "Gaurav V. Dubewar"},
+      {"@type": "Person", "name": "Rishav V. Bansal"}
+    ],
+    "foundingDate": "2017",
+    "serviceType": [
+      "Luxury Residential Interior Design",
+      "Commercial Interior Architecture",
+      "Clinic & Healthcare Interior Design",
+      "Turnkey Project Execution",
+      "Architectural 3D Visualization",
+      "Space Planning"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -59,7 +125,7 @@
   </a>
 
   <a href="index.html" aria-label="Reload Home" onclick="window.location.reload(); return false;" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); height: calc(100% - 4px); display: block; z-index: 10;">
-    <img src="assets/logo-main_thumb.png" alt="Team 360 Logo" style="height: 100%; width: auto; object-fit: contain;" />
+    <img src="assets/logo-main_thumb.png" alt="Team 360 Studio — Luxury Interior Design & Turnkey Execution Studio in Nagpur" style="height: 100%; width: auto; object-fit: contain;" loading="lazy" decoding="async" />
   </a>
 
 
@@ -90,7 +156,7 @@
   <div class="hero-bg noise-overlay" aria-hidden="true">
     <img
       src="./assets/Cinematrix Production CC-102 - Copy.jpg"
-      alt="Luxury interior design showcase by Team 360"
+      alt="Luxury turnkey interior design and architecture studio in Nagpur — Team 360 Studio hero showcase"
       fetchpriority="high"
       style="object-fit: cover;"
     />
@@ -98,11 +164,13 @@
   </div>
 
   <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; width: 100%; height: 100%;">
-    <p class="hero-tag hero-sub" style="justify-content: center; margin-bottom: 20px;">Interior Design &amp; Turnkey Execution Studio — Nagpur &amp; Surat</p>
+    <p class="hero-tag hero-sub" style="justify-content: center; margin-bottom: 20px;">Bespoke turnkey interior design and architectural planning for luxury residences, villas, and modern clinics across Nagpur.</p>
     <h1 class="hero-title" style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: baseline; justify-content: center; gap: clamp(1rem, 3vw, 3rem); margin: 0; padding: 0; width: 100%; white-space: nowrap;">
       <span class="hero-line">TEAM</span>
       <span class="hero-line line-live">360</span>
     </h1>
+    <!-- SEO: Primary keyword heading (visually supplemented by the hero h1) -->
+    <p class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Luxury Interior Design &amp; Turnkey Architecture Studio in Nagpur</p>
   </div>
 
   <div class="hero-footer">
@@ -138,8 +206,9 @@
     <div class="blueprint-col image-col fade-up fade-up-delay-1">
       <img src="assets/A9P03285.jpg" 
            onerror="this.onerror=null; this.src='team-360-fav-pic/A9P03285.jpg'; this.onerror=function(){this.onerror=null; this.src='A9P03285.jpg';};" 
-           alt="Team 360 Design Studio Luxury Detail" 
+           alt="Premium luxury interior design and bespoke architectural craftsmanship by Team 360 Studio Nagpur" 
            class="studio-profile-img ambient-breath about-us-img-element"
+           loading="lazy" decoding="async"
            style="width: 100%; height: 600px; object-fit: cover; display: block;" />
     </div>
   </div>
@@ -165,7 +234,7 @@
 
     <!-- Center Brain Image -->
     <div class="brain-image-container fade-up center-image-container">
-      <img src="assets/brain final.png" alt="Brain Final" class="brain-img ambient-breath" />
+      <img src="assets/brain final.png" alt="Team 360 Studio design methodology — creative and analytical approach to luxury interior design in Nagpur" class="brain-img ambient-breath" loading="lazy" decoding="async" />
     </div>
 
     <!-- Right Brain Text -->
@@ -223,7 +292,7 @@
     <div class="about-left fade-up" aria-hidden="true">
       <img
         src="images/founder-portrait.jpg"
-        alt="Team 360 Executive Portrait"
+        alt="Founding Directors of Team 360 Studio — Luxury Interior Design & Architecture firm in Nagpur"
         style="width: 100%; height: 100%; object-fit: cover; display: block;"
         loading="lazy" decoding="async"
       />
@@ -277,7 +346,7 @@
 <!-- ==============================
      SCREEN 3: WHAT WE CREATE
 ============================== -->
-<section id="what-we-create" class="services-section fade-up">
+<section id="what-we-create" class="services-section fade-up" aria-label="Interior Design Services in Nagpur">
   <div class="services-container">
     <div class="services-header">
       <h2 class="services-title">WHAT WE CREATE</h2>
@@ -288,22 +357,27 @@
       <div class="service-item fade-up">
         <div class="service-num">01</div>
         <div class="service-name">RESIDENTIAL</div>
+        <h3 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Luxury Residential Interior Design in Nagpur</h3>
       </div>
       <div class="service-item fade-up fade-up-delay-1">
         <div class="service-num">02</div>
         <div class="service-name">COMMERCIAL</div>
+        <h3 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Commercial &amp; Clinic Interior Architecture</h3>
       </div>
       <div class="service-item fade-up fade-up-delay-2">
         <div class="service-num">03</div>
         <div class="service-name">HOSPITALITY</div>
+        <h3 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Turnkey Project Execution &amp; Space Planning</h3>
       </div>
       <div class="service-item fade-up fade-up-delay-3">
         <div class="service-num">04</div>
         <div class="service-name">ARCHITECTURE</div>
+        <h3 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Architectural 3D Visualizations &amp; Elevation</h3>
       </div>
       <div class="service-item fade-up fade-up-delay-4">
         <div class="service-num">05</div>
         <div class="service-name">TURNKEY</div>
+        <h3 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">End-to-End Turnkey Interior Execution Nagpur</h3>
       </div>
     </div>
   </div>
@@ -646,12 +720,12 @@
   <div style="padding: 0 var(--container-pad); display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem;">
     <!-- Left Column: Nagpur Office -->
     <div style="background: rgba(255,255,255,0.03); padding: 4rem 3rem; border: var(--border-subtle); display: flex; flex-direction: column; gap: 1rem;">
-      <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #FFFFFF; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Nagpur Office</h3>
+      <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #FFFFFF; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Nagpur Studio</h3>
       <div style="color: #D4D4D4; font-weight: 300; font-size: 0.95rem; line-height: 2; letter-spacing: 0.05em;">
         <strong>Co-Founder:</strong> Gaurav Dubewar<br>
-        <strong>Phone:</strong> +91 75060 40860<br>
+        <strong>Phone:</strong> +91 79870 11432<br>
         <strong>Email:</strong> gaurav@team360.business<br>
-        <strong>Physical Address:</strong> Plot No 14, Second Bus Stop, Gopal Nagar, Nagpur, Maharashtra, 440022
+        <strong>Address:</strong> Gopal Nagar Second Bus Stop, Near Dr Dubewar Clinic, Gopal Nagar, Nagpur, Maharashtra 440022
       </div>
       <div style="margin-top: 2rem;">
         <a href="https://www.google.com/maps/place/Team+360-+Interior+design+studio/@21.1166277,79.0496138,773m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bd4c1d2de6fb90b:0x5e5aa7540382763a!8m2!3d21.1166277!4d79.0521887!16s%2Fg%2F11rt_x6bj2?hl=en-GB&authuser=0&entry=ttu&g_ep=EgoyMDI2MDcwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn-see-more" style="display: inline-block;">VIEW ON MAP</a>
@@ -660,7 +734,7 @@
 
     <!-- Right Column: Surat Office -->
     <div style="background: rgba(255,255,255,0.03); padding: 4rem 3rem; border: var(--border-subtle); display: flex; flex-direction: column; gap: 1rem;">
-      <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #FFFFFF; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Surat Office</h3>
+      <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #FFFFFF; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Surat Studio</h3>
       <div style="color: #D4D4D4; font-weight: 300; font-size: 0.95rem; line-height: 2; letter-spacing: 0.05em;">
         <strong>Co-Founder:</strong> Rishav Bansal<br>
         <strong>Phone:</strong> +91 98198 76508<br>
@@ -673,7 +747,14 @@
     </div>
   </div>
 
-  <div style="padding: 0 var(--container-pad); display: flex; justify-content: center; gap: 1rem; margin-top: 5rem; margin-bottom: 2rem;">
+  <!-- Local SEO Geo-Coverage Block -->
+  <div style="padding: 3rem var(--container-pad) 0; text-align: center;">
+    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.35); font-weight: 300; letter-spacing: 0.08em; max-width: 780px; margin: 0 auto; line-height: 2; text-transform: uppercase;">
+      Serving prime residential and commercial sectors across Nagpur: Ramdaspeth &nbsp;·&nbsp; Civil Lines &nbsp;·&nbsp; Dharampeth &nbsp;·&nbsp; Byramji Town &nbsp;·&nbsp; Besa &nbsp;·&nbsp; Pratap Nagar &nbsp;·&nbsp; Wardha Road
+    </p>
+  </div>
+
+  <div style="padding: 0 var(--container-pad); display: flex; justify-content: center; gap: 1rem; margin-top: 4rem; margin-bottom: 2rem;">
     <a href="https://www.instagram.com/team360designs/?hl=en" target="_blank" rel="noopener noreferrer" class="social-square" aria-label="Instagram">
       INSTAGRAM
     </a>
@@ -765,18 +846,18 @@
   <!-- Sticky Office Action Widget -->
   <div class="sticky-contact-widget">
     <!-- NGP Button (Desktop) -->
-    <a href="https://wa.me/917506040860?text=Hi%20Team%20360%20Nagpur%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20about%20interior%20project." target="_blank" class="office-btn desktop-link" aria-label="Contact Nagpur Studio">
+    <a href="https://wa.me/917987011432?text=Hi%20Team%20360%20Studio%2C%20I%27d%20like%20to%20inquire%20about%20an%20interior%20design%20consultation%20in%20Nagpur" target="_blank" class="office-btn desktop-link" aria-label="Contact Nagpur Studio on WhatsApp">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
       <span class="office-label">NGP</span>
     </a>
     <!-- NGP Button (Mobile) -->
-    <a href="tel:+917506040860" class="office-btn mobile-link" aria-label="Call Nagpur Studio">
+    <a href="tel:+917987011432" class="office-btn mobile-link" aria-label="Call Nagpur Studio">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
       <span class="office-label">NGP</span>
     </a>
 
     <!-- SRT Button (Desktop) -->
-    <a href="https://wa.me/919819876508?text=Hi%20Team%20360%20Surat%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20about%20interior%20project." target="_blank" class="office-btn desktop-link" aria-label="Contact Surat Studio">
+    <a href="https://wa.me/919819876508?text=Hi%20Team%20360%20Surat%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20about%20interior%20project." target="_blank" class="office-btn desktop-link" aria-label="Contact Surat Studio on WhatsApp">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
       <span class="office-label">SRT</span>
     </a>
