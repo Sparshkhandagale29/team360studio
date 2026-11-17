@@ -63,7 +63,8 @@
 
 html {
   scrollbar-width: none;
-  scroll-behavior: auto; /* Lenis controls this */
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 html::-webkit-scrollbar { display: none; }
 

@@ -34,8 +34,8 @@
   <link rel="apple-touch-icon" href="favicon.png?v=2" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/layout.css?v=4" />
+  <link rel="stylesheet" href="css/global.css?v=2" />
+  <link rel="stylesheet" href="css/layout.css?v=5" />
   <link rel="stylesheet" href="css/animations.css" />
 
   <!-- Lenis Smooth Scroll CDN -->
@@ -130,7 +130,15 @@
 
 
 
-  <!-- Hamburger -->
+  <!-- Desktop Navigation Menu Bar -->
+  <nav class="nav-links" role="navigation" aria-label="Primary Navigation">
+    <a href="#about-us-section" class="nav-link" data-section="about-us-section">About Us</a>
+    <a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a>
+    <a href="#achievements-awards" class="nav-link" data-section="achievements-awards">Achievements</a>
+    <a href="#contact" class="nav-link" data-section="contact">Contact Us</a>
+  </nav>
+
+  <!-- Hamburger (Mobile 3-line Menu) -->
   <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
     <span></span>
     <span></span>
@@ -145,7 +153,7 @@
   <a href="#achievements-awards" class="mobile-nav-link">Achievements</a>
   <a href="#contact" class="mobile-nav-link">Contact Us</a>
 
-  <div class="mobile-menu-footer">Dream · Create · Live · © 2025 Team 360 Turnkey Projects LLP</div>
+  <div class="mobile-menu-footer">Dream · Create · Live · © 2026 Team 360 Turnkey Projects LLP</div>
 </div>
 
 
@@ -215,138 +223,18 @@
 </section>
 
 <!-- ==============================
-     SECTION 2: MINDSET MATRIX
+     SECTION 2: PORTFOLIO
 ============================== -->
-<section id="mindset-matrix" class="mindset-matrix-section">
-  <h2 class="ideology-header text-center" style="margin-bottom: 4rem; text-align: center;">THE MINDSET MATRIX</h2>
-  
-  <div class="brains-container single-brain-layout">
-    <!-- Left Brain Text -->
-    <div class="brain-text text-left slide-out-left">
-      <h3 class="mindset-title">LEFT-BRAIN</h3>
-      <ul class="mindset-list mindset-list-desktop-left">
-        <li>Logic &amp; Mathematics</li>
-        <li>Structure Diagnostics</li>
-        <li>Engineering Compliance</li>
-        <li>Budget Optimization & Control</li>
-      </ul>
-    </div>
-
-    <!-- Center Brain Image -->
-    <div class="brain-image-container fade-up center-image-container">
-      <img src="assets/brain final.png" alt="Team 360 Studio design methodology — creative and analytical approach to luxury interior design in Nagpur" class="brain-img ambient-breath" loading="lazy" decoding="async" />
-    </div>
-
-    <!-- Right Brain Text -->
-    <div class="brain-text text-right slide-out-right">
-      <h3 class="mindset-title">RIGHT-BRAIN</h3>
-      <ul class="mindset-list mindset-list-desktop-left">
-        <li>Art &amp; Creative Intuition</li>
-        <li>Spatial Colour Selection</li>
-        <li>Custom Material Layering</li>
-        <li>Design Creativity</li>
-      </ul>
-    </div>
+<section id="portfolio" class="portfolio-category-section fade-up">
+  <div class="portfolio-category-header">
+    <h2 class="ideology-header" style="text-align: center; margin-bottom: 3rem;">PORTFOLIO</h2>
   </div>
-  
-  <div class="mindset-footer fade-up text-center" style="margin-top: 4rem;">
-    <p style="font-size: clamp(1.1rem, 1.3vw, 1.3rem); color: var(--color-text-sub); font-weight: 300; letter-spacing: 0.05em; text-align: center;">
-      Our golden ratio of creativity and Analytical skills is how we consistently deliver world-class spaces.
-    </p>
-  </div>
-</section>
 
-<!-- ==============================
-     SECTION 3: OPERATIONAL CODE
-============================== -->
-<section id="operational-code" class="operational-code-section fade-up" style="margin-top: 2rem;">
-  <h2 class="ideology-header text-center" style="margin-bottom: 3rem; text-align: center;">THE OPERATIONAL CODE</h2>
-  <div class="operational-code-container" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
-    <ul class="studio-code-list centered-list">
-      <li>
-        <strong>CREATIVE</strong> — Translating imagination into physical reality through design passion.
-      </li>
-      <li>
-        <strong>END-TO-END</strong> — Managing everything from initial concept creation to final handover.
-      </li>
-      <li>
-        <strong>PUNCTUAL</strong> — Enforcing systematic design workflows to guarantee on-time completion.
-      </li>
-      <li>
-        <strong>TECHNICAL</strong> — Obsessing over raw structural execution details and modern material physics.
-      </li>
-      <li>
-        <strong>FRIENDLY</strong> — Maintaining open, transparent collaboration where clients remain an integral part of decision-making.
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- ==============================
-     SECTION 3: ABOUT US (FOUNDERS)
-============================== -->
-<section id="about" aria-label="About Team 360">
-  <div class="about-grid">
-
-    <!-- Left: Sticky Image -->
-    <div class="about-left fade-up" aria-hidden="true">
-      <img
-        src="images/founder-portrait.jpg"
-        alt="Founding Directors of Team 360 Studio — Luxury Interior Design & Architecture firm in Nagpur"
-        style="width: 100%; height: 100%; object-fit: cover; display: block;"
-        loading="lazy" decoding="async"
-      />
-      <div class="about-left-frame"></div>
-      <div class="about-left-label">Est. — Nagpur &amp; Surat</div>
-    </div>
-
-    <!-- Right: Scrolling Content -->
-    <div class="about-right">
-
-
-
-      <!-- Founders -->
-      <div class="founders-grid">
-        <!-- Gaurav -->
-        <div class="founder-card fade-up fade-up-delay-3">
-          <h3>Gaurav V. Dubewar</h3>
-          <div class="founder-title">Founding Director</div>
-          <div class="founder-tags">
-            <span class="founder-tag">NICMAR Post Graduate</span>
-            <span class="founder-tag">JLL</span>
-            <span class="founder-tag">Mahindra Lifespaces</span>
-          </div>
-          <p class="founder-desc" style="text-align: left; margin: 0; padding: 0; font-size: 12px;">
-            Gaurav brings a distinguished corporate background forged within India’s leading real estate and property development institutions, including JLL (Jones Lang LaSalle) and Mahindra Lifespaces. Throughout his tenure across these industry giants, he specialized in developer-level project metrics, commercial risk mitigation, and large-scale operational governance.
-            <br><br>
-            At Team 360 Studio, Gaurav translates this high-level enterprise intelligence into the specialized context of luxury residential and commercial interior design. By implementing institutional-grade dashboard tracking, rigorous procurement compliance, and precise financial forecasting, he ensures every project is executed with transparent financial discipline, optimal resource allocation, and absolute operational efficiency.
-          </p>
-        </div>
-
-        <!-- Rishav -->
-        <div class="founder-card fade-up fade-up-delay-4">
-          <h3>Rishav V. Bansal</h3>
-          <div class="founder-title">Founding Director</div>
-          <div class="founder-tags">
-            <span class="founder-tag">NICMAR Post Graduate</span>
-            <span class="founder-tag">L&amp;T Realty</span>
-          </div>
-          <p class="founder-desc" style="text-align: left; margin: 0; padding: 0; font-size: 12px;">
-            Rishav’s engineering foundation was built within the high-stakes structural operations of L&amp;T Realty (Larsen &amp; Toubro), one of Asia’s premier infrastructure and construction conglomerates. Managing complex, large-scale projects at L&amp;T instilled in him an uncompromising standard for engineering precision, strict material compliance, and rigorous timeline management.
-            <br><br>
-            At Team 360 Studio, Rishav heads technical execution and on-site engineering operations. He brings deep structural discipline, advanced procurement standards, and contractual schedule adherence to every residential and turnkey commercial fit-out. Under his technical leadership, Team 360 Studio guarantees builds that are not only aesthetically exceptional, but structurally unimpeachable and delivered precisely on schedule.
-          </p>
-        </div>
-      </div>
-
-    </div><!-- /about-right -->
-  </div><!-- /about-grid -->
-</section>
-
-<!-- ==============================
+  <!-- Services / What We Create Overview -->
+  <!-- ==============================
      SCREEN 3: WHAT WE CREATE
 ============================== -->
-<section id="what-we-create" class="services-section fade-up" aria-label="Interior Design Services in Nagpur">
+<section id="what-we-create" class="services-section fade-up" style="padding: 2rem 0 6rem 0;" aria-label="Interior Design Services in Nagpur">
   <div class="services-container">
     <div class="services-header">
       <h2 class="services-title">WHAT WE CREATE</h2>
@@ -383,14 +271,6 @@
   </div>
 </section>
 
-
-<!-- ==============================
-     SECTION 4: PORTFOLIO
-============================== -->
-<section id="portfolio" class="portfolio-category-section fade-up">
-  <div class="portfolio-category-header">
-    <h2 class="ideology-header" style="text-align: center; margin-bottom: 3rem;">PORTFOLIO</h2>
-  </div>
 
   <!-- Residential Sub-category -->
   <div id="residential" class="portfolio-matrix-section" style="margin-bottom: 6rem; overflow: visible !important; touch-action: auto !important;">
@@ -633,6 +513,135 @@
 </section>
 
 <!-- ==============================
+     SECTION 3: MINDSET MATRIX
+============================== -->
+<section id="mindset-matrix" class="mindset-matrix-section">
+  <h2 class="ideology-header text-center" style="margin-bottom: 4rem; text-align: center;">THE MINDSET MATRIX</h2>
+  
+  <div class="brains-container single-brain-layout">
+    <!-- Left Brain Text -->
+    <div class="brain-text text-left slide-out-left">
+      <h3 class="mindset-title">LEFT-BRAIN</h3>
+      <ul class="mindset-list mindset-list-desktop-left">
+        <li>Logic &amp; Mathematics</li>
+        <li>Structure Diagnostics</li>
+        <li>Engineering Compliance</li>
+        <li>Budget Optimization & Control</li>
+      </ul>
+    </div>
+
+    <!-- Center Brain Image -->
+    <div class="brain-image-container fade-up center-image-container">
+      <img src="assets/brain final.png" alt="Team 360 Studio design methodology — creative and analytical approach to luxury interior design in Nagpur" class="brain-img ambient-breath" loading="lazy" decoding="async" />
+    </div>
+
+    <!-- Right Brain Text -->
+    <div class="brain-text text-right slide-out-right">
+      <h3 class="mindset-title">RIGHT-BRAIN</h3>
+      <ul class="mindset-list mindset-list-desktop-left">
+        <li>Art &amp; Creative Intuition</li>
+        <li>Spatial Colour Selection</li>
+        <li>Custom Material Layering</li>
+        <li>Design Creativity</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="mindset-footer fade-up text-center" style="margin-top: 4rem;">
+    <p style="font-size: clamp(1.1rem, 1.3vw, 1.3rem); color: var(--color-text-sub); font-weight: 300; letter-spacing: 0.05em; text-align: center;">
+      Our golden ratio of creativity and Analytical skills is how we consistently deliver world-class spaces.
+    </p>
+  </div>
+</section>
+
+<!-- ==============================
+     SECTION 4: OPERATIONAL CODE
+============================== -->
+<section id="operational-code" class="operational-code-section fade-up" style="margin-top: 2rem;">
+  <h2 class="ideology-header text-center" style="margin-bottom: 3rem; text-align: center;">THE OPERATIONAL CODE</h2>
+  <div class="operational-code-container" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+    <ul class="studio-code-list centered-list">
+      <li>
+        <strong>CREATIVE</strong> — Translating imagination into physical reality through design passion.
+      </li>
+      <li>
+        <strong>END-TO-END</strong> — Managing everything from initial concept creation to final handover.
+      </li>
+      <li>
+        <strong>PUNCTUAL</strong> — Enforcing systematic design workflows to guarantee on-time completion.
+      </li>
+      <li>
+        <strong>TECHNICAL</strong> — Obsessing over raw structural execution details and modern material physics.
+      </li>
+      <li>
+        <strong>FRIENDLY</strong> — Maintaining open, transparent collaboration where clients remain an integral part of decision-making.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==============================
+     SECTION 5: ABOUT US (FOUNDERS)
+============================== -->
+<section id="about" aria-label="About Team 360">
+  <div class="about-grid">
+
+    <!-- Left: Sticky Image -->
+    <div class="about-left fade-up" aria-hidden="true">
+      <img
+        src="images/founder-portrait.jpg"
+        alt="Founding Directors of Team 360 Studio — Luxury Interior Design & Architecture firm in Nagpur"
+        style="width: 100%; height: 100%; object-fit: cover; display: block;"
+        loading="lazy" decoding="async"
+      />
+      <div class="about-left-frame"></div>
+      <div class="about-left-label">Est. — Nagpur &amp; Surat</div>
+    </div>
+
+    <!-- Right: Scrolling Content -->
+    <div class="about-right">
+
+
+
+      <!-- Founders -->
+      <div class="founders-grid">
+        <!-- Gaurav -->
+        <div class="founder-card fade-up fade-up-delay-3">
+          <h3>Gaurav V. Dubewar</h3>
+          <div class="founder-title">Founding Director</div>
+          <div class="founder-tags">
+            <span class="founder-tag">NICMAR Post Graduate</span>
+            <span class="founder-tag">JLL</span>
+            <span class="founder-tag">Mahindra Lifespaces</span>
+          </div>
+          <p class="founder-desc" style="text-align: left; margin: 0; padding: 0; font-size: 12px;">
+            Gaurav brings a distinguished corporate background forged within India’s leading real estate and property development institutions, including JLL (Jones Lang LaSalle) and Mahindra Lifespaces. Throughout his tenure across these industry giants, he specialized in developer-level project metrics, commercial risk mitigation, and large-scale operational governance.
+            <br><br>
+            At Team 360 Studio, Gaurav translates this high-level enterprise intelligence into the specialized context of luxury residential and commercial interior design. By implementing institutional-grade dashboard tracking, rigorous procurement compliance, and precise financial forecasting, he ensures every project is executed with transparent financial discipline, optimal resource allocation, and absolute operational efficiency.
+          </p>
+        </div>
+
+        <!-- Rishav -->
+        <div class="founder-card fade-up fade-up-delay-4">
+          <h3>Rishav V. Bansal</h3>
+          <div class="founder-title">Founding Director</div>
+          <div class="founder-tags">
+            <span class="founder-tag">NICMAR Post Graduate</span>
+            <span class="founder-tag">L&amp;T Realty</span>
+          </div>
+          <p class="founder-desc" style="text-align: left; margin: 0; padding: 0; font-size: 12px;">
+            Rishav’s engineering foundation was built within the high-stakes structural operations of L&amp;T Realty (Larsen &amp; Toubro), one of Asia’s premier infrastructure and construction conglomerates. Managing complex, large-scale projects at L&amp;T instilled in him an uncompromising standard for engineering precision, strict material compliance, and rigorous timeline management.
+            <br><br>
+            At Team 360 Studio, Rishav heads technical execution and on-site engineering operations. He brings deep structural discipline, advanced procurement standards, and contractual schedule adherence to every residential and turnkey commercial fit-out. Under his technical leadership, Team 360 Studio guarantees builds that are not only aesthetically exceptional, but structurally unimpeachable and delivered precisely on schedule.
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /about-right -->
+  </div><!-- /about-grid -->
+</section>
+
+<!-- ==============================
      SECTION 5: TESTIMONIAL TICKER
 ============================== -->
 <section class="testimonial-ticker">
@@ -818,7 +827,7 @@
 <!-- ==============================
      APP JAVASCRIPT
 ============================== -->
-<script src="js/app.js?v=3" defer></script>
+<script src="js/app.js?v=4" defer></script>
 
   <!-- Category Modal Mirror Overlay -->
   <div id="category-modal-overlay" class="modal-overlay" style="display: none;">

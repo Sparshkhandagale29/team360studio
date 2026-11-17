@@ -142,9 +142,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        navLinks.forEach(l => l.classList.remove('active'));
         const active = document.querySelector(`.nav-link[data-section="${entry.target.id}"]`);
-        if (active) active.classList.add('active');
+        if (active) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          active.classList.add('active');
+        }
       }
     });
   }, { threshold: 0.35 });
@@ -162,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.classList.add('open');
     hamburger.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
-    if (lenis) lenis.stop();
+    if (typeof lenis !== 'undefined' && lenis) lenis.stop();
   }
 
   function closeMobileMenu() {
@@ -170,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
-    if (lenis) lenis.start();
+    if (typeof lenis !== 'undefined' && lenis) lenis.start();
   }
 
   hamburger.addEventListener('click', () => {
@@ -184,6 +186,39 @@ document.addEventListener('DOMContentLoaded', () => {
   // ESC key closes mobile menu
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMobileMenu();
+  });
+
+  /* =============================================
+     04B. SMOOTH ANCHOR SCROLL
+  ============================================= */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        
+        // If mobile menu is open, close it
+        if (mobileMenu && mobileMenu.classList.contains('open')) {
+          closeMobileMenu();
+        }
+        
+        // Calculate offset position accounting for fixed navbar height
+        const navHeight = nav ? nav.offsetHeight : 70;
+        const targetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+        
+        window.scrollTo({
+          top: Math.max(0, targetTop),
+          behavior: 'smooth'
+        });
+
+        if (history.pushState) {
+          history.pushState(null, null, targetId);
+        }
+      }
+    });
   });
 
   /* =============================================

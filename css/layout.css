@@ -23,6 +23,18 @@
   transition: transform 0.65s var(--ease-cinematic);
 }
 
+/* Scroll target offset for fixed navbar */
+#about-us-section,
+#portfolio,
+#mindset-matrix,
+#operational-code,
+#about,
+#achievements-awards,
+#contact,
+#faq {
+  scroll-margin-top: 80px;
+}
+
 .nav-logo {
   font-family: var(--font-heading);
   font-size: 1.05rem;
@@ -52,6 +64,21 @@
   position: relative;
   transition: color 0.35s ease;
   display: inline-block;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .nav-logo {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+  }
+  .nav-links {
+    gap: 20px;
+  }
+  .nav-link {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+  }
 }
 
 .nav-link:hover { color: var(--color-text); }  /* #F4F4F4 off-white on hover */
@@ -143,7 +170,7 @@
 
 /* Hamburger */
 .hamburger {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 7px;
   cursor: pointer;
@@ -216,6 +243,7 @@ body:has(.mobile-menu.open) .sticky-contact-widget {
   color: var(--color-text-sub);           /* #CCCCCC white-gray */
   transition: color 0.3s ease;
   line-height: 1.15;
+  cursor: pointer;
 }
 
 .mobile-nav-link:hover { color: var(--color-accent); }
@@ -1609,8 +1637,8 @@ body:has(.mobile-menu.open) .sticky-contact-widget {
     padding: 40px 16px !important;
   }
   
-  .nav-links   { display: none; }
-  .hamburger   { display: flex; }
+  .nav-links   { display: none !important; }
+  .hamburger   { display: flex !important; }
   .mobile-menu { display: flex; }
 
   .hero-title  { font-size: clamp(3.8rem, 16vw, 7rem); }
